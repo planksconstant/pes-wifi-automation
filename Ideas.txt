@@ -1,2 +1,3 @@
 Drop in your ideas here 
 
+1- Open CV related (similar to object detection)
