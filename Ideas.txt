@@ -1,3 +1,5 @@
 Drop in your ideas here 
 
 1- Open CV related (similar to object detection)
+
+2- Selenium Web Automation (Sophos/captive login Automator )
