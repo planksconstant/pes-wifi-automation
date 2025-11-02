@@ -1,0 +1,9 @@
+Approach 1
+
+Connect to wi-fi "automate this using system calls "
+Open browser and go to captive/PESU ip address
+Fill in SRN and password 
+Click on login
+
+Problems 
+As soon as we connect to wifi the captive opens up on the desktop/os not in a browser 
