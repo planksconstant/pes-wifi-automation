@@ -67,5 +67,22 @@ class login():
 
 
 
-login().change_password()
+n=0
+while n<3:
+    print("Enter the numbers for the following operations")
+    print("1=Creating credentials")
+    print("2=Change SRN/Password")
+    print("3=Exit the menu")
+    n=int(input(""))
+    if n==1:
+        login().accept_name_password()
+        login().config()
+    elif n==2:
+        login().change_password()
+    elif n==3:
+        break
+    else:
+        break
+
+
 
