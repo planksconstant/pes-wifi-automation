@@ -36,12 +36,36 @@ class login():
         a = open("credentials.txt", "w")
         srn=input("Enter SRN : ")
         pwd=input("Enter Password : ")
-        a.write(srn)
-        a.write("\n")
-        a.write(pwd)
-        a.write("\n")
+        a.write(srn+"\n")
+        #a.write("\n")
+        a.write(pwd+"\n")
+        #a.write("\n")
+    def change_password(self):
+        file = open("credentials.txt", "r")
+        l=file.readlines()
+        srn=l[0]
+        pwd=l[1]
+        c=l[2]
+        print(srn)
+        print(l)
+        a=input("Enter Your SRN ")
+        if (a+'\n')!=srn:
+            print("SRN entered is wrong")
+        else:
+            b=input("Enter your Password ")
+            if (b+'\n')!=pwd:
+                print("Password entered is wrong ")
+            else:
+                srn=input("Enter New SRN : ")
+                pwd=input("Enter password : ")
+                l=[srn,pwd,c]
+
+        file.close()
+        file=open("credentials.txt", "w")
+        for j in l:
+            file.write(j+"\n")
 
 
-login().accept_name_password()
-login().config()
+
+login().change_password()
 
