@@ -1,6 +1,7 @@
 #file for accepting SRN and password
 import os
 import platform
+import stdiomask
 platform = platform.system()
 
 class login():
@@ -40,7 +41,7 @@ class login():
             else:
                 a = open("credentials.txt", "w")
                 srn = input("Enter SRN : ")
-                pwd = input("Enter Password : ")
+                pwd = stdiomask.getpass("Password: ", mask='*')
                 a.write(srn + "\n")
                 # a.write("\n")
                 a.write(pwd + "\n")
@@ -65,12 +66,12 @@ class login():
         if (a+'\n')!=srn:
             print("SRN entered is wrong")
         else:
-            b=input("Enter your Password ")
+            b= stdiomask.getpass("Password: ", mask='*')
             if (b+'\n')!=pwd:
                 print("Password entered is wrong ")
             else:
                 srn=input("Enter New SRN : ")
-                pwd=input("Enter password : ")
+                pwd= stdiomask.getpass("Password: ", mask='*')
                 l=[srn,pwd,c]
 
         file.close()
