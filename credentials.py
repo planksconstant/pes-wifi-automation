@@ -5,10 +5,11 @@ import stdiomask
 platform = platform.system()
 
 class login():
+    def config(self,l):
+        print(l)
+        if l=="allow":
 
-    def config(self):
-        a = open("credentials.txt", "r")
-        if a.readlines() != []:
+
             a = open("credentials.txt", "a")
             if platform=="Darwin":#Darwin is mac
                 print("Looks like you are on Mac OS ")
@@ -27,17 +28,19 @@ class login():
                 print("Looks like you are on an unsupported platform :( ")
         else:
             print("Configuration Issue Contact @planksconstant ")
-            global login_issue
+
 
 
 
 
     def accept_name_password(self):
+        x=""
         if os.path.exists('credentials.txt'):
             a = open("credentials.txt", "r")
 
             if a.readlines()!=[]:
                 print("Credentials are stored :)")
+                x="dont_allow"
             else:
                 a = open("credentials.txt", "w")
                 srn = input("Enter SRN : ")
@@ -53,7 +56,9 @@ class login():
             a.write(srn+"\n")
             #a.write("\n")
             a.write(pwd+"\n")
+            x="allow"
         #a.write("\n")
+        return x
     def change_password(self):
         file = open("credentials.txt", "r")
         l=file.readlines()
@@ -89,8 +94,9 @@ while n<3:
     print("3=Exit the menu")
     n=int(input(""))
     if n==1:
+        #a=login().accept_name_password()
+        #login().config(a)
         login().accept_name_password()
-        login().config()
     elif n==2:
         login().change_password()
     elif n==3:
