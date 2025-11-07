@@ -1,6 +1,8 @@
 #file for accepting SRN and password
 import os
 import platform
+import getpass
+
 platform = platform.system()
 
 class login():
@@ -40,7 +42,7 @@ class login():
             else:
                 a = open("credentials.txt", "w")
                 srn = input("Enter SRN : ")
-                pwd = input("Enter Password : ")
+                pwd = getpass.getpass(prompt='Enter your password: ')
                 a.write(srn + "\n")
                 # a.write("\n")
                 a.write(pwd + "\n")
@@ -48,7 +50,7 @@ class login():
         else:
             a = open("credentials.txt", "w")
             srn=input("Enter SRN : ")
-            pwd=input("Enter Password : ")
+            pwd = getpass.getpass(prompt='Enter your password: ')
             a.write(srn+"\n")
             #a.write("\n")
             a.write(pwd+"\n")
