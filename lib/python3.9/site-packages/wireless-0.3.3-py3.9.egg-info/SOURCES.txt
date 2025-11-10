@@ -1,0 +1,11 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+wireless/Wireless.py
+wireless/__init__.py
+wireless.egg-info/PKG-INFO
+wireless.egg-info/SOURCES.txt
+wireless.egg-info/dependency_links.txt
+wireless.egg-info/top_level.txt
