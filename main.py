@@ -1,7 +1,6 @@
 import credentials
-a=open("credentials.txt","r")
-l=a.readlines()
-if l==[]:
+import os
+if os.path.exists('credentials.txt'):
     credentials.accept_name_password()
 
 import time
