@@ -1,8 +1,5 @@
 import credentials
-a=open("credentials.txt","r")
-l=a.readlines()
-if l==[]:
-    credentials.accept_name_password()
+credentials.accept_name_password()
 
 import time
 import login
