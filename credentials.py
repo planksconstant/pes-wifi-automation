@@ -16,13 +16,10 @@ def accept_name_password():
             a = open("credentials.txt", "w")
             srn = input("Enter SRN : ")
             pwd = stdiomask.getpass("Password: ", mask='*')
-            wifiname = input("Enter WI-FI name :")
-            wifipwd=stdiomask.getpass("Enter WI-FI Password: ", mask='*')
             a.write(srn + "\n")
             # a.write("\n")
             a.write(pwd + "\n")
-            a.write(wifiname+"\n")
-            a.write(wifipwd+"\n")
+
     else:
 
         a = open("credentials.txt", "w")
