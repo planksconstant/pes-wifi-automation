@@ -1,0 +1,1 @@
+networksetup -setairportnetwork en0 "nao" "05101520"
