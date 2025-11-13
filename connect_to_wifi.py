@@ -1,6 +1,12 @@
 import os
 from wireless import Wireless
+import platform
 def connecting_wifi():
-    wireless = Wireless()
-    wireless.connect(ssid="PESU-EC-Campus", password="PESU-EC-Campus")
+    platform_system = platform.system()
+    if platform_system == "Darwin":
+        exit_status = os.system("./connect_to_wifi_mac.sh")
+        if exit_status==0:
+            print("Script executed successfully!")
+        else:
+            print("Issue")
 
