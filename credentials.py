@@ -10,7 +10,7 @@ def accept_name_password():
     if os.path.exists('credentials.txt'):
         a = open("credentials.txt", "r")
 
-        if a.readlines()==[]:
+        if a.readlines()!=[]:
             print("Credentials are stored :)")
         else:
             a = open("credentials.txt", "w")
