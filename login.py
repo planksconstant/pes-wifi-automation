@@ -1,6 +1,7 @@
 import selenium
 import platform
 from selenium import webdriver
+from enc_dec import decrypt
 from selenium.webdriver.common.by import By  # Add this import
 import time
 def setup_drive():
@@ -10,10 +11,10 @@ def setup_drive():
         return webdriver.Safari()
     elif platform_system == "Linux":
         print("Looks like you are on Linux")
-        return webdriver.Chrome(service=service)
+        return webdriver.Chrome()
     elif platform_system=="Windows":
         print("Looks like you are on windows")
-        return webdriver.Edge()
+        return webdriver.Chrome()
     else:
         print("Unsuported OS :(")
 def read():
@@ -25,15 +26,17 @@ def automator():
         x=read()
         driver = setup_drive()
         username = x[0]
-        password = x[1]
+        password = decrypt(x[1].strip())
         driver.get("http://192.168.254.1:8090/httpclient.html")
         time.sleep(0.5)#required to make sure the fields do not get bad text
         driver.find_element(By.NAME, "username").send_keys(username)
         driver.find_element(By.NAME, "password").send_keys(password)
         driver.find_element(By.ID, "loginbutton").click()
         time.sleep(0.5)
-    finally:
-        driver.quit()
+    except:
+        print("*")
+    #finally:
+        #driver.quit()
 
 
 
