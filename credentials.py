@@ -2,8 +2,8 @@
 import os
 import platform
 import stdiomask
+from enc_dec import decrypt, encrypt
 platform = platform.system()
-
 
 def accept_name_password():
     x=""
@@ -18,23 +18,23 @@ def accept_name_password():
             pwd = stdiomask.getpass("Password: ", mask='*')
             a.write(srn + "\n")
             # a.write("\n")
-            a.write(pwd + "\n")
+            a.write(encrypt(pwd) + "\n")
 
     else:
 
         a = open("credentials.txt", "w")
         srn=input("Enter SRN : ")
-        pwd=input("Enter Password : ")
+        pwd=stdiomask.getpass("Enter Password : ")
         a.write(srn+"\n")
         #a.write("\n")
-        a.write(pwd+"\n")
+        a.write(encrypt(pwd)+"\n")
     #a.write("\n")
     return x
 def change_password():
     file = open("credentials.txt", "r")
     l=file.readlines()
     srn=l[0]
-    pwd=l[1]
+    pwd=decrypt(l[1].strip())
     #c=l[2]-->driver name
     a=input("Enter Your SRN ")
     print(srn)
@@ -46,8 +46,8 @@ def change_password():
             print("Password entered is wrong ")
         else:
             srn=input("Enter New SRN : ")
-            pwd= stdiomask.getpass("Password: ", mask='*')
-            l=[srn,pwd]
+            pwd= stdiomask.getpass("Enter New Password: ", mask='*')
+            l=[srn,encrypt(pwd)]
     file.close()
     file=open("credentials.txt", "w")
     for j in l:
