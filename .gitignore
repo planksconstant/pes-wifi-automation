@@ -1,6 +1,8 @@
 # Sensitive credentials
 credentials.txt
 test_connect.py
+testing.py
+clear_stored_data.py
 
 # Python cache files
 __pycache__/
