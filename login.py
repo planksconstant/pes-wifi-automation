@@ -1,29 +1,6 @@
-<<<<<<< HEAD
-import selenium
-import platform
-from selenium import webdriver
-from enc_dec import decrypt
-from selenium.webdriver.common.by import By  # Add this import
-import time
-def setup_drive():
-    platform_system = platform.system()
-    if platform_system == "Darwin":  # Darwin is mac
-        print("Looks like you are on Mac OS ")
-        return webdriver.Safari()
-    elif platform_system == "Linux":
-        print("Looks like you are on Linux")
-        return webdriver.Chrome()
-    elif platform_system=="Windows":
-        print("Looks like you are on windows")
-        return webdriver.Chrome()
-    else:
-        print("Unsuported OS :(")
-def read():
-=======
 import time
 from playwright.sync_api import sync_playwright, TimeoutError
 def read():#geting USN and pwd from text file
->>>>>>> 4b50be392aef9101f3fd7825edd31572d31c94a9
     a=open("credentials.txt","r")
     credentials_list=a.readlines()
     return credentials_list
@@ -110,28 +87,11 @@ def sign_in_to_signout_ver2(page, username, password, browser):
 
     print("Logging you out and closing browser...")
     try:
-<<<<<<< HEAD
-        x=read()
-        driver = setup_drive()
-        username = x[0]
-        password = decrypt(x[1].strip())
-        driver.get("http://192.168.254.1:8090/httpclient.html")
-        time.sleep(0.5)#required to make sure the fields do not get bad text
-        driver.find_element(By.NAME, "username").send_keys(username)
-        driver.find_element(By.NAME, "password").send_keys(password)
-        driver.find_element(By.ID, "loginbutton").click()
-        time.sleep(0.5)
-    except:
-        print("*")
-    #finally:
-        #driver.quit()
-=======
         page.click("#loginbutton")
         page.wait_for_timeout(2000)
     except:
         pass
     browser.close()
->>>>>>> 4b50be392aef9101f3fd7825edd31572d31c94a9
 
 
 x = read()
