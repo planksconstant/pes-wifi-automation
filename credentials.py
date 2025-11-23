@@ -16,20 +16,30 @@ def accept_name_password():
             a = open("credentials.txt", "w")
             srn = input("Enter SRN : ")
             pwd = stdiomask.getpass("Password: ", mask='*')
-            a.write(srn + "\n")
-            # a.write("\n")
-            a.write(encrypt(pwd) + "\n")
+            pwd2=stdiomask.getpass("Password: ", mask='*')
+            if pwd==pwd2:
+                a.write(srn + "\n")
+                # a.write("\n")
+                a.write(encrypt(pwd) + "\n")
+            else:
+                print("The entered passwords do not match.")
+
+
 
     else:
 
         a = open("credentials.txt", "w")
         srn=input("Enter SRN : ")
         pwd=stdiomask.getpass("Enter Password : ")
-        a.write(srn+"\n")
-        #a.write("\n")
-        a.write(encrypt(pwd)+"\n")
-    #a.write("\n")
+        pwd2 = stdiomask.getpass("Password: ", mask='*')
+        if pwd == pwd2:
+            a.write(srn + "\n")
+            # a.write("\n")
+            a.write(encrypt(pwd) + "\n")
+        else:
+            print("The entered passwords do not match.") 
     return x
+accept_name_password()
 def change_password():
     file = open("credentials.txt", "r")
     l=file.readlines()
