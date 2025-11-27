@@ -16,7 +16,7 @@ def accept_name_password():
             a = open("credentials.txt", "w")
             srn = input("Enter SRN : ")
             pwd = stdiomask.getpass("Password: ", mask='*')
-            pwd2=stdiomask.getpass("Password: ", mask='*')
+            pwd2=stdiomask.getpass("Confirm Password: ", mask='*')
             if pwd==pwd2:
                 a.write(srn + "\n")
                 # a.write("\n")
@@ -31,7 +31,7 @@ def accept_name_password():
         a = open("credentials.txt", "w")
         srn=input("Enter SRN : ")
         pwd=stdiomask.getpass("Enter Password : ")
-        pwd2 = stdiomask.getpass("Password: ", mask='*')
+        pwd2 = stdiomask.getpass("Confirm Password: ", mask='*')
         if pwd == pwd2:
             a.write(srn + "\n")
             # a.write("\n")
