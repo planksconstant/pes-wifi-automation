@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<WLANProfile xmlns="http://www.microsoft.com/networking/WLAN/profile/v1">
+    <!-- Network name (SSID) -->
+    <name>PESU-EC-Campus</name>
+    
+    <SSIDConfig>
+        <SSID>
+            <name>PESU-EC-Campus</name>
+        </SSID>
+    </SSIDConfig>
+    
+    <!-- Connection type - ESS means standard WiFi network -->
+    <connectionType>ESS</connectionType>
+    
+    <!-- Connect automatically when in range -->
+    <connectionMode>auto</connectionMode>
+    
+    <!-- Security settings -->
+    <MSM>
+        <security>
+            <authEncryption>
+                <!-- WPA2 Personal security -->
+                <authentication>WPA2PSK</authentication>
+                <!-- AES encryption -->
+                <encryption>AES</encryption>
+                <!-- Not using enterprise authentication -->
+                <useOneX>false</useOneX>
+            </authEncryption>
+            <sharedKey>
+                <keyType>passPhrase</keyType>
+                <!-- protected=false means password is stored in plain text -->
+                <protected>false</protected>
+                <!-- Your actual WiFi password -->
+                <keyMaterial>PESU-EC-Campus</keyMaterial>
+            </sharedKey>
+        </security>
+    </MSM>
+</WLANProfile>

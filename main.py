@@ -5,7 +5,7 @@ import enc_dec
 
 import time
 import platform
-
+import stdiomask
 print("===Enter 1 proceed to Login/Signup :: Enter 2 to change Password")
 change_pwd=int(input())
 if change_pwd==1:
@@ -44,7 +44,7 @@ elif signout==2:
     print("1-to confirm signout;2-to quit signout")
     decision=int(input())
     if decision==1:
-        b=input("Enter Password")
+        b= stdiomask.getpass("Password: ", mask='*')
         x=open("credentials.txt","r")
         content=x.readlines()
         if content[1].strip()==enc_dec.encrypt(b):

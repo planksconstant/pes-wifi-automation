@@ -10,5 +10,5 @@ def connecting_wifi():
         else:
             print("Issue,try connecting to WI-FI manually")
     if platform_system =="Windows":
-        exit_status=os.system("powershell -ExecutionPolicy Bypass -File connect_to_wifi_win.ps1")
+        exit_status=os.system("connect_wifi.cmd")
 

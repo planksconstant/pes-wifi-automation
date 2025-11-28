@@ -132,7 +132,7 @@ username = x[0].strip()
 password = enc_dec.decrypt(x[1].strip())
 
 with sync_playwright() as p:
-    browser = p.firefox.launch(headless=False)
+    browser = p.chromium.launch(headless=False)
     page = browser.new_page()
 
     # Initial login attempt
