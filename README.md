@@ -18,13 +18,11 @@
 
 ## Index
 
-1. [Overview](#overview)
-2. [Installation](#installation)
-3. [Using the Auto Login Tool](#using-the-auto-login-tool)
-4. [Features](#features)  
-5. [OS Wi-Fi Scripts](#os-wi-fi-scripts)  
-6. [Playwright Debug Mode](#playwright-debug-mode)  
-7. [Notes](#notes)
+1. **[Overview](#overview)**
+2. **[Installation](#installation)**
+3. **[Using the Auto Login Tool](#using-the-auto-login-tool)**
+4. **[Features](#features)**   
+5. **[Conclusion](#conclusion)**
 
 ---
 
@@ -83,7 +81,7 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
    ```
 4. **Activate virtual environment:**
    ```bash
-   source .venv\bin\activate
+   source .venv/bin/activate
    ```
 5. **Install requirements:**
    ```bash
@@ -106,3 +104,32 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
    ```bash
    python3 main.py
    ```
+
+   ---
+
+## Features
+
+- 🔐 **Encrypted Credential Storage**  
+  Stores SRN and password locally using a custom encryption layer to prevent plaintext exposure.
+
+- 🌐 **Automated Wi-Fi Network Handling**  
+  Detects OS (Windows, macOS, Linux) and runs appropriate scripts to enable Wi-Fi and connect to the PESU network.
+
+- 🤖 **Playwright-Based Captive Portal Automation**  
+  Launches Chromium, loads the portal, injects credentials, performs login, and verifies authentication state.
+
+- 🔄 **Session Persistence with Auto-Refresh**  
+  Periodically refreshes the authenticated session (default: every 10 minutes) to prevent forced logouts.
+
+- 🔧 **Configurable Runtime Options**  
+  Full CLI workflow including Login/Signup, Password Change, and Logout with credential wipe.
+
+- 🧹 **Secure Logout Procedure**  
+  Clears encrypted credentials from disk and resets the authentication state.
+
+- 💻 **Cross-Platform Compatibility**  
+  Fully compatible with **Windows, macOS, and Linux** with OS-specific connection logic.
+
+---
+## Conclusion
+With this tool, connecting to PESU Wi-Fi becomes automatic and hassle-free. Once set up, it takes care of login, session refresh, and Wi-Fi handling—letting you focus entirely on your work instead of the captive portal.
