@@ -1,1 +1,0 @@
- netsh wlan connect name="PESU-EC-Campus" ssid="PESU-EC-Campus" interface="Wi-Fi"

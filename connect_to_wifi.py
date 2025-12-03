@@ -1,5 +1,4 @@
 import os
-from wireless import Wireless
 import platform
 def connecting_wifi():
     platform_system = platform.system()
