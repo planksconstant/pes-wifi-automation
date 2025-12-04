@@ -1,4 +1,4 @@
-<h1 align='center'>📡 PESU Wi-Fi Auto Login Automation 🤖</h1>
+<h1 align='center'>PESU Wi-Fi Auto Login Automation </h1>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-darkred.svg)
 ![Playwright](https://img.shields.io/badge/Playwright-Automation-blue.svg)
@@ -7,7 +7,7 @@
 
 ---
 
-## 👥 Contributors
+## Contributors
 
 **[Abhishek D](https://github.com/planksconstant)**<br>
 **[Aakash G](https://github.com/AakashG-1808)**<br>
@@ -16,7 +16,7 @@
 
 ---
 
-## 📚 Index
+## Index
 
 1. **[Overview](#overview)**
 2. **[Installation](#installation)**
@@ -26,7 +26,7 @@
 
 ---
 
-## 🔍 Overview
+## Overview
 
 This Python tool automates the process of connecting to PESU Wi-Fi and logging into the captive portal using Playwright.  
 Your SRN and password are stored locally in **encrypted form**, automatically connect Wi-Fi, log into the portal, and refresh the session every 10 minutes.
@@ -35,10 +35,10 @@ The tool is fully interactive, and credentials never leave your system.
 
 ---
 
-## 🛠️ Installation
+## Installation
 
 Follow the steps below to set up the project on Windows, macOS, or Linux.
-### 1) 🪟 Windows
+### 1) Windows
 
 1. **Clone the repository:**
    ```bash
@@ -65,7 +65,7 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
    playwright install chromium
    ```
 
-### 2) 🍎 macOS/Linux
+### 2) macOS/Linux
 
 1. **Clone the repository:**
    ```bash
@@ -94,7 +94,7 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
 
 ---
 
-## ⚡ Using the auto login tool
+## Using the auto login tool
 ### Run the script:
 1. **Windows:**
    ```bash
@@ -107,29 +107,29 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
 
    ---
 
-## ✨ Features
+## Features
 
-- 🔐 **Encrypted Credential Storage**  
+- **Encrypted Credential Storage**  
   Stores SRN and password locally using a custom encryption layer to prevent plaintext exposure.
 
-- 🌐 **Automated Wi-Fi Network Handling**  
+- **Automated Wi-Fi Network Handling**  
   Detects OS (Windows, macOS, Linux) and runs appropriate scripts to enable Wi-Fi and connect to the PESU network.
 
-- 🤖 **Playwright-Based Captive Portal Automation**  
+- **Playwright-Based Captive Portal Automation**  
   Launches Chromium, loads the portal, injects credentials, performs login, and verifies authentication state.
 
-- 🔄 **Session Persistence with Auto-Refresh**  
+- **Session Persistence with Auto-Refresh**  
   Periodically refreshes the authenticated session (default: every 10 minutes) to prevent forced logouts.
 
-- 🔧 **Configurable Runtime Options**  
+- **Configurable Runtime Options**  
   Full CLI workflow including Login/Signup, Password Change, and Logout with credential wipe.
 
-- 🧹 **Secure Logout Procedure**  
+- **Secure Logout Procedure**  
   Clears encrypted credentials from disk and resets the authentication state.
 
-- 💻 **Cross-Platform Compatibility**  
+- **Cross-Platform Compatibility**  
   Fully compatible with **Windows, macOS, and Linux** with OS-specific connection logic.
 
 ---
-## 📝 Conclusion
+## Conclusion
 With this tool, connecting to PESU Wi-Fi becomes automatic and hassle-free. Once set up, it takes care of login, session refresh, and Wi-Fi handling—letting you focus entirely on your work instead of the captive portal.
