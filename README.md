@@ -104,8 +104,7 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
    ```bash
    python3 main.py
    ```
-
-   ---
+---
 
 ## Features
 
