@@ -1,4 +1,4 @@
-<h1 align='center'>PESU Wi-Fi Auto Login Automation </h1>
+<h1 align='center'>PESU Wi-Fi Login Automation </h1>
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-darkred.svg)
 ![Playwright](https://img.shields.io/badge/Playwright-Automation-blue.svg)
