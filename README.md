@@ -46,7 +46,7 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
    ```
 2. **Change directory to the folder:**
    ```bash
-   cd Jackfruit-Problem-PES2UG25
+   cd pes-wifi-automation
    ```
 3. **Create virtual environment:**
    ```bash
@@ -69,11 +69,11 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/AakashG-1808/Jackfruit-Problem-PES2UG25.git
+   git clone https://github.com/plankconstant/pes-wifi-automation.git
    ```
 2. **Change directory to the folder:**
    ```bash
-   cd Jackfruit-Problem-PES2UG25
+   cd pes-wifi-automation
    ```
 3. **Create virtual environment:**
    ```bash
