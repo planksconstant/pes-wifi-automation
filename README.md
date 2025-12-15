@@ -87,7 +87,11 @@ Follow the steps below to set up the project on Windows, macOS, or Linux.
    ```bash
    pip install -r requirements.txt
    ```
-6. **Install playwright Chromium browser:**
+6. **Install Playwright:**
+   ```bash
+   python3 -m playwright install
+   ```
+8. **Install playwright Chromium browser:**
    ```bash
    playwright install chromium
    ```
