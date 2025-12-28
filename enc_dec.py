@@ -26,6 +26,7 @@ def encrypt(pwd):
         else:
             out += ch
     return out
+#print(encrypt("Computer"))
 
 
 def decrypt(pwd):

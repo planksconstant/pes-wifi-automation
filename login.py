@@ -1,7 +1,7 @@
 import time
 from playwright.sync_api import sync_playwright, TimeoutError
 import enc_dec
-import threading
+
 def read():#geting USN and pwd from text file
     a=open("credentials.txt","r")
     credentials_list=a.readlines()
@@ -45,11 +45,7 @@ def login_after_logout(page,username, password):
 user_wants_to_stop=False
 import threading
 import time
-
-import time
 from playwright.sync_api import sync_playwright
-
-import time
 import sys
 import select
 from playwright.sync_api import sync_playwright
@@ -132,7 +128,7 @@ username = x[0].strip()
 password = enc_dec.decrypt(x[1].strip())
 
 with sync_playwright() as p:
-    browser = p.chromium.launch(headless=True)
+    browser = p.chromium.launch(headless=False)
     page = browser.new_page()
 
     # Initial login attempt
